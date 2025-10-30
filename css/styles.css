@@ -1,0 +1,543 @@
+/* Сброс и базовые */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin: 0 auto;
+}
+h1.proportional-oldstyle {
+  font-variant-numeric: oldstyle-nums proportional-nums;
+  font-feature-settings: "onum" 1, "pnum" 1; /* фолбэк */
+}
+
+h1.tabular-lining {
+  font-variant-numeric: lining-nums tabular-nums;
+  font-feature-settings: "lnum" 1, "tnum" 1; /* фолбэк */
+}
+
+* h3 {
+  text-align: center;
+}
+html,
+body {
+  overflow-x: hidden; /* 🔥 отключает горизонтальный скролл */
+  width: 1440px;
+}
+p {
+  font-size: 20px;
+  line-height: 110%;
+}
+body {
+  font-family: "Fira Sans", system-ui, sans-serif;
+  background-color: #fffaf0;
+  color: #fffaf0;
+}
+h3 {
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 400;
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Первый экран */
+#first_section {
+  height: 951px;
+  background: #18161b url("/assets/1_bg.svg") center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: relative;
+}
+
+/* Заголовок */
+#first_section h1 {
+  width: 100%;
+  font-size: 240px;
+  font-weight: 900px;
+  line-height: 0.9;
+  color: #fffaf0;
+  letter-spacing: 2%;
+}
+#first_section h2 {
+  width: 100%;
+  font-size: 52px;
+  font-weight: 900px;
+  line-height: 1;
+  color: #fffaf0;
+  letter-spacing: 2%;
+  padding-left: 10px;
+}
+#second_section {
+  background-color: #18161b;
+  height: 1066.55px;
+}
+
+/* Кнопка */
+.buy-button {
+  position: absolute;
+  display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: visible;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 16px;
+  background-color: #000;
+  color: #fff;
+  font-weight: 800;
+  font-size: 48px;
+  letter-spacing: 0;
+  cursor: pointer;
+  transform: rotate(5deg);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.buy-button:hover {
+  transform: rotate(-5deg) scale(1.2);
+  background-color: #111;
+}
+#second_section {
+  background: #18161b;
+  position: relative;
+  height: 747px;
+}
+#second_section > p {
+  font-size: 96px;
+  color: #403353;
+  font-weight: 600;
+  position: absolute;
+}
+.tag {
+  display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: visible;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 32px;
+  background-color: #793a80;
+  color: #f7f7ee;
+  font-weight: 700;
+  font-size: 144px;
+  letter-spacing: 2%;
+  line-height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* 50% от высоты секции */
+  left: 50%; /* 50% от ширины секции */
+  transform: translate(-50%, -50%);
+}
+.tag:hover {
+  display: inline-block;
+  width: fit-content;
+  white-space: nowrap;
+  overflow: visible;
+  padding: 20px 46px;
+  border: none;
+  border-radius: 24px;
+  background-color: #793a80;
+  color: #f7f7ee;
+  font-weight: 700;
+  font-size: 205.6px;
+  letter-spacing: 2%;
+  line-height: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* 50% от высоты секции */
+  left: 50%; /* 50% от ширины секции */
+  transform: translate(-50%, -50%);
+}
+#third_section {
+  height: 626px;
+  background: #18161b url("/assets/2_bg.svg") center / cover no-repeat;
+  position: relative;
+  display: grid;
+  padding: 0 40px;
+  grid-template-columns:
+    minmax(18rem, 1fr) /* левая колонка: не уже 18rem */
+    minmax(0, 2fr) /* центр — всё, что осталось */
+    minmax(18rem, 1fr); /* правая колонка: не уже 18rem */
+  column-gap: 23px;
+  align-items: center;
+  margin-inline: auto;
+}
+#third_section .left,
+#third_section .right {
+  font-size: 20px;
+  color: white;
+  min-width: 0;
+  overflow: hidden;
+}
+#third_section .center {
+  display: grid;
+  place-items: center;
+}
+
+#third_section .center img {
+  width: 665px;
+  margin: 0;
+}
+#fourth_fifth_section {
+  height: 1606px; /* или min-height: 894px; */
+  background: #301916;
+  background-image: url("/assets/4-5_bg.svg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: auto;
+  position: relative;
+  align-items: center;
+}
+.rune {
+  width: 111px;
+  position: absolute;
+  font-size: 48px;
+  font-weight: 800;
+  color: #2b2a2c;
+  text-align: center;
+}
+#fourth_fifth_section p {
+  font-size: 20px;
+  line-height: 125%;
+  font-weight: 400;
+  position: relative;
+  z-index: 10;
+  margin-left: 261.25px;
+  width: 440px;
+  margin-bottom: 72px;
+}
+#fourth_fifth_section h3 {
+  width: 580px;
+  text-align: center;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  padding-top: 70px;
+  margin: 0;
+}
+#fourth_fifth_section img {
+  position: absolute;
+}
+#sixth_section {
+  background: #18161b;
+  background-image: url(/assets/6_bg.svg);
+  height: 830px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 121px;
+  gap: 60px;
+}
+.teeth {
+  z-index: 1;
+  position: absolute;
+  left: 408px;
+  top: -97px;
+}
+#sixth_section p {
+  font-size: 64px;
+  z-index: 10;
+}
+#sixth_section > .left {
+  height: 757px;
+}
+#seventh_section {
+  background-image: url("/assets/7_bg.svg");
+  height: 762.5px;
+  position: relative;
+}
+#seventh_section h3 {
+  top: 227px;
+  width: 350px;
+}
+#seventh_section img {
+  top: 385px;
+  position: absolute;
+}
+#seventh_section h1 {
+  font-size: 160px;
+  position: absolute;
+  margin-top: 346px;
+  align-items: center;
+  left: 50%; /* 50% от ширины секции */
+  transform: translate(-50%);
+  width: 1200px;
+  font-weight: 200;
+}
+input[type="text"]::placeholder {
+  color: #fffae0; /* любой нужный тебе цвет */
+  opacity: 1; /* чтобы не был полупрозрачным */
+}
+#seventh_section input {
+  color: white;
+  position: absolute;
+  top: 348px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 160px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+#eight_section {
+  background-color: #18161b;
+  height: 370px;
+}
+#eight_section h1 {
+  font-size: 290.38px;
+  font-weight: 400;
+  padding: 40px 0;
+  transition: transform 0.2s ease;
+  position: relative;
+  display: contents;
+}
+#eight_section h1:hover {
+  font-size: 290.38px;
+  font-weight: 400;
+  padding: 40px 0;
+  transform: rotate(5deg);
+  transition: transform 0.2s ease;
+}
+#ninth_section {
+  background-image: url("/assets/9_bg.svg");
+  background-color: #18161b;
+  height: 1094px;
+  position: relative;
+  padding: 0 40px;
+}
+#ninth_section h3 {
+  top: 235px;
+}
+/* ключевая часть */
+.keys {
+  --cols: 8;
+  --rows: 4;
+  display: grid; /* ← это создаёт сетку */
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-rows: repeat(var(--rows), 1fr);
+  gap: var(--gap);
+}
+
+.keys > li {
+  list-style: none;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 36px;
+  border: 2px solid #fff;
+}
+.corner_top_left {
+  list-style: none;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 36px;
+  border: 2px solid #fff;
+  border-top-left-radius: 16px;
+}
+.corner_top_right {
+  list-style: none;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  font-size: 36px;
+  border: 2px solid #fff;
+  border-top-right-radius: 16px;
+}
+.corner_bottom_right {
+  border: 2px solid #fff;
+  border-bottom-right-radius: 16px;
+}
+.corner_bottom_left {
+  border: 2px solid #fff;
+  border-bottom-left-radius: 16px;
+}
+.corner_bottom {
+  border: 2px solid #fff;
+  border-bottom-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.keys > li > span {
+  padding: 8px;
+  display: inline-block; /* нужно, чтобы transform работал */
+  transition: transform 0.2s ease; /* плавная анимация */
+  display: inline-block;
+  color: #fff;
+  font-size: 36px;
+}
+.keys > li {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: visible; /* чтобы увеличение не обрезалось */
+  box-shadow: inset 0 0 0 2px #fff;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.1s ease;
+  transform-origin: top left; /* рост идёт только вниз и вправо */
+}
+/* эффект при наведении */
+.keys > li:hover {
+  background-color: #101218; /* фон при увеличении */
+  box-shadow: inset 0 0 0 2px #fff;
+  transform: scale(5); /* увеличение вниз и вправо */
+  z-index: 10; /* чтобы было поверх соседей */
+}
+
+.keypad {
+  --bg: #101218;
+  --radius: 41px;
+  --gap: 0px;
+  padding: 27px;
+  border-radius: var(--radius);
+  background: var(--bg);
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  top: 300px;
+}
+/* сама сетка не меняется */
+
+/* внутренний слой, который будем увеличивать */
+.keys > li .zoom {
+  position: absolute;
+  inset: 0; /* ровно как ячейка */
+  display: grid;
+  place-items: center;
+  border-radius: 10px; /* ваш радиус */
+  transform-origin: top left; /* рост только вниз-вправо */
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  pointer-events: none; /* не перехватывает курсор */
+  background: transparent; /* фона нет по умолчанию */
+  box-shadow: inset 0 0 0 0 transparent;
+  z-index: 1;
+}
+
+/* текст внутри слоя */
+.keys > li .zoom > span {
+  pointer-events: none; /* полностью «прозрачный» для мыши */
+}
+
+/* эффект при наведении на ячейку */
+.keys > li:hover .zoom {
+  transform: scale(10); /* увеличение в 10 раз */
+  background: #101218; /* появляется фон */
+  box-shadow: inset 0 0 0 2px #fff; /* контур контейнера */
+}
+
+/* ------------------------------------------ */
+.keypad_2 {
+  --bg: #101218;
+  --radius: 41px;
+  --gap: 0px;
+  padding: 27px;
+  border-radius: var(--radius);
+  background: var(--bg);
+  width: fit-content;
+  margin: 0 auto;
+  position: absolute;
+  top: 300px;
+}
+.keypad_2 .keys > li > span {
+  padding: 8px;
+  display: inline-block; /* нужно, чтобы transform работал */
+  transition: transform 0.2s ease; /* плавная анимация */
+  display: inline-block;
+  color: #fff;
+  font-size: 36px;
+}
+.keypad_2 .keys {
+  width: max-content;
+}
+
+.keypad_2 .keys > li {
+  position: relative;
+  display: grid;
+  place-items: center;
+  overflow: visible; /* чтобы увеличение не обрезалось */
+  box-shadow: inset 0 0 0 2px #fff;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.1s ease;
+  transform-origin: top left; /* рост идёт только вниз и вправо */
+}
+/* эффект при наведении */
+.keypad_2 .keys > li:hover {
+  background-color: #101218; /* фон при увеличении */
+  box-shadow: inset 0 0 0 2px #fff;
+  transform: scale(5); /* увеличение вниз и вправо */
+  z-index: 10; /* чтобы было поверх соседей */
+}
+/* внутренний слой, который будем увеличивать */
+.keypad_2 .keys > li .zoom {
+  position: absolute;
+  inset: 0; /* ровно как ячейка */
+  display: grid;
+  place-items: center;
+  border-radius: 10px; /* ваш радиус */
+  transform-origin: bottom left;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    box-shadow 0.2s ease;
+  pointer-events: none; /* не перехватывает курсор */
+  background: transparent; /* фона нет по умолчанию */
+  box-shadow: inset 0 0 0 0 transparent;
+  z-index: 1;
+}
+
+/* текст внутри слоя */
+.keypad_2 .keys > li .zoom > span {
+  pointer-events: none; /* полностью «прозрачный» для мыши */
+}
+
+/* эффект при наведении на ячейку */
+.keypad_2 .keys > li:hover .zoom {
+  transform: scale(10); /* увеличение в 10 раз */
+  background: #101218; /* появляется фон */
+  box-shadow: inset 0 0 0 2px #fff; /* контур контейнера */
+}
+/* ------------------------------------------ */
+#ninth_section .blacksmith {
+  width: 554px;
+  position: absolute;
+  top: 700px;
+  left: 800px;
+}
+#footer {
+  height: fit-content;
+  padding: 40px 40px;
+  background-color: #6b1c04;
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-start;
+}
+#footer h5 {
+  font-size: 24px;
+  line-height: 100%;
+  font-weight: 400;
+}
+#footer p {
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 400;
+  opacity: 80%;
+  font-weight: 300;
+}
+#footer p,
+div {
+  margin: 0;
+}
