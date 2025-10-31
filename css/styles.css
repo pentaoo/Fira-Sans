@@ -46,7 +46,7 @@ h3 {
 /* Первый экран */
 #first_section {
   height: 951px;
-  background: #18161b url(".assets/1_bg.svg") center / cover no-repeat;
+  background: #18161b url("assets/1_bg.svg") center / cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +159,7 @@ a {
 }
 #third_section {
   height: 626px;
-  background: #18161b url(".assets/2_bg.svg") center / cover no-repeat;
+  background: #18161b url("assets/2_bg.svg") center / cover no-repeat;
   position: relative;
   display: grid;
   padding: 0 40px;
@@ -190,7 +190,7 @@ a {
 #fourth_fifth_section {
   height: 1606px; /* или min-height: 894px; */
   background: #301916;
-  background-image: url(".assets/4-5_bg.svg");
+  background-image: url("assets/4-5_bg.svg");
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: auto;
@@ -229,7 +229,7 @@ a {
 }
 #sixth_section {
   background: #18161b;
-  background-image: url(".assets/6_bg.svg");
+  background-image: url("assets/6_bg.svg");
   height: 830px;
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -253,7 +253,7 @@ a {
   height: 757px;
 }
 #seventh_section {
-  background-image: url(".assets/7_bg.svg");
+  background-image: url("assets/7_bg.svg");
   height: 762.5px;
   position: relative;
 }
@@ -312,7 +312,7 @@ input[type="text"]::placeholder {
   transition: transform 0.2s ease;
 }
 #ninth_section {
-  background-image: url(".assets/9_bg.svg");
+  background-image: url("assets/9_bg.svg");
   background-color: #18161b;
   height: 1094px;
   position: relative;
