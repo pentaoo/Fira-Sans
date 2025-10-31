@@ -259,7 +259,7 @@ a {
 }
 #seventh_section h3 {
   top: 227px;
-  width: 350px;
+  width: 500px;
 }
 #seventh_section img {
   top: 385px;
@@ -282,7 +282,7 @@ input[type="text"]::placeholder {
 #seventh_section input {
   color: white;
   position: absolute;
-  top: 348px;
+  top: 339px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
