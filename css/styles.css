@@ -282,7 +282,7 @@ input[type="text"]::placeholder {
 #seventh_section input {
   color: white;
   position: absolute;
-  top: 339px;
+  top: 347px;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
